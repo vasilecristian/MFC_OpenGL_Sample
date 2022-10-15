@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{9d72e211-18b2-49a6-a36a-ef3d1eda7c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{5cb5f537-d5d2-4e96-9dc1-f26051d662a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{e3ab2e1b-d307-446f-a746-ea7e224b6389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\shaders">
+      <UniqueIdentifier>{35b31637-50e0-4bed-a334-4d2ed9fe4fd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Utils\Angel.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utils\CheckError.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utils\mat.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utils\uofrGraphics.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utils\vec.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ChildFrm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ClassView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FileView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\framework.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MainFrm.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MFC_OpenGL_Sample.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MFC_OpenGL_SampleDoc.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MFC_OpenGL_SampleView.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\OutputWnd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pch.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PropertiesWnd.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Resource.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\targetver.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ViewTree.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Utils\InitShader.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\uofrGraphics.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ChildFrm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ClassView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FileView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MainFrm.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MFC_OpenGL_Sample.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MFC_OpenGL_SampleDoc.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MFC_OpenGL_SampleView.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\OutputWnd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pch.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PropertiesWnd.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ViewTree.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\MFCOpenGLSample.aps">
+      <Filter>src</Filter>
+    </None>
+    <None Include="res\MFCOpenGLSample.rc2">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\shaders\fshader91.glsl">
+      <Filter>res\shaders</Filter>
+    </None>
+    <None Include="res\shaders\vshader91.glsl">
+      <Filter>res\shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\class_view.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\class_view_hc.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\classview.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\classview_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\explorer.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\explorer_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\file_view.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\file_view_hc.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\fileview.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\fileview_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\menuimages.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\menuimages_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\MFC_OpenGL_Sample.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\MFC_OpenGL_SampleDoc.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\output_wnd.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\output_wnd_hc.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\properties.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\properties_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\properties_wnd.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\properties_wnd_hc.ico">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\sort.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\sort_hc.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>res</Filter>
+    </Image>
+    <Image Include="res\userimages.bmp">
+      <Filter>res</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res\MFCOpenGLSample.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
