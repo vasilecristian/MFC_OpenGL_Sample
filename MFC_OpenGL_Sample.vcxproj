@@ -216,10 +216,12 @@ copy /Y "$(SolutionDir)dependencies\win\glew-2.1.0\bin\Release\x64\*.dll"  "$(Ta
     <ClInclude Include="src\PropertiesWnd.h" />
     <ClInclude Include="src\Resource.h" />
     <ClInclude Include="src\targetver.h" />
-    <ClInclude Include="src\Utils\Angel.h" />
+    <ClInclude Include="src\Utils\GLHeaders.h" />
+    <ClInclude Include="src\Utils\GLUtils.h" />
+    <ClInclude Include="src\Utils\ShaderUtils.h" />
     <ClInclude Include="src\Utils\CheckError.h" />
     <ClInclude Include="src\Utils\mat.h" />
-    <ClInclude Include="src\Utils\uofrGraphics.h" />
+    <ClInclude Include="src\Utils\BasicGraphics.h" />
     <ClInclude Include="src\Utils\vec.h" />
     <ClInclude Include="src\ViewTree.h" />
   </ItemGroup>
@@ -234,8 +236,11 @@ copy /Y "$(SolutionDir)dependencies\win\glew-2.1.0\bin\Release\x64\*.dll"  "$(Ta
     <ClCompile Include="src\OutputWnd.cpp" />
     <ClCompile Include="src\pch.cpp" />
     <ClCompile Include="src\PropertiesWnd.cpp" />
-    <ClCompile Include="src\Utils\InitShader.cpp" />
-    <ClCompile Include="src\Utils\uofrGraphics.cpp" />
+    <ClCompile Include="src\Utils\GLUtils.cpp" />
+    <ClCompile Include="src\Utils\ShaderUtils.cpp" />
+    <ClCompile Include="src\Utils\mat.cpp" />
+    <ClCompile Include="src\Utils\BasicGraphics.cpp" />
+    <ClCompile Include="src\Utils\vec.cpp" />
     <ClCompile Include="src\ViewTree.cpp" />
   </ItemGroup>
   <ItemGroup>

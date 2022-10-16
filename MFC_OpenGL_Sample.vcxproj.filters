@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Utils\Angel.h">
+    <ClInclude Include="src\Utils\ShaderUtils.h">
       <Filter>src\Utils</Filter>
     </ClInclude>
     <ClInclude Include="src\Utils\CheckError.h">
@@ -24,7 +24,7 @@
     <ClInclude Include="src\Utils\mat.h">
       <Filter>src\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="src\Utils\uofrGraphics.h">
+    <ClInclude Include="src\Utils\BasicGraphics.h">
       <Filter>src\Utils</Filter>
     </ClInclude>
     <ClInclude Include="src\Utils\vec.h">
@@ -72,12 +72,18 @@
     <ClInclude Include="src\ViewTree.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\Utils\GLHeaders.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utils\GLUtils.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Utils\InitShader.cpp">
+    <ClCompile Include="src\Utils\ShaderUtils.cpp">
       <Filter>src\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="src\Utils\uofrGraphics.cpp">
+    <ClCompile Include="src\Utils\BasicGraphics.cpp">
       <Filter>src\Utils</Filter>
     </ClCompile>
     <ClCompile Include="src\ChildFrm.cpp">
@@ -112,6 +118,15 @@
     </ClCompile>
     <ClCompile Include="src\ViewTree.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\mat.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\vec.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utils\GLUtils.cpp">
+      <Filter>src\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

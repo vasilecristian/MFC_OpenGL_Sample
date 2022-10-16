@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "Utils/Angel.h";
+
 
 
 class CMFCOpenGLSampleView : public CView
@@ -40,12 +40,12 @@ public:
 //--------------------------------------
 protected:
 	// You will add the following stuff!!!
-	virtual BOOL GetOldStyleRenderingContext(CDC* pDC, HGLRC hRC);
+	virtual HGLRC GetOldStyleRenderingContext(CDC* pDC);
 	virtual BOOL SetupPixelFormat(CDC* pDC);
 
 private:
 	//OpenGL Setup
-	CDC* GetRenderingContext(HGLRC hRC);
+	CDC* GetRenderingContext(HGLRC& hRC);
 	//Rendering Context and Device Context Pointers
 	HGLRC	m_hRC;
 	CDC* m_pDC;
