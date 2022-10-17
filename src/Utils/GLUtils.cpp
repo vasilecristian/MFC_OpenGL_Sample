@@ -1,8 +1,3 @@
-
-
-//#include <GL/wglew.h>
-//#include <GL/glew.h>
-
 #include "GLUtils.h"
 #include "ShaderUtils.h"
 #include "BasicGraphics.h"
@@ -22,6 +17,8 @@ namespace gl
 
 	GLfloat GLUtils::rotY = 0;   
 	GLfloat GLUtils::rotX = 0;
+
+	GLfloat GLUtils::cubeY = 0;
 
 	//Function: InitializeOpenGL
 	//Purpose:
@@ -190,12 +187,13 @@ namespace gl
 		// Arguments are Radius, Slices, Stacks
 		// Sphere is centered around current origin.
 		BasicGraphics::DrawSolidSphere(0.1f, 20, 20);
+		//BasicGraphics::DrawSolidCube(0.2f);
 
 
 		// when we rotated the sphere earlier, we rotated drawing space
 		// and created a new "frame"
 		// to move the cube up or down we now have to refer to the z-axis
-		mv *= Translate(0.0f, 0.0f, 2.5f);
+		mv *= Translate(0.0f, cubeY, 0.0f);
 
 		//Send the transformation matrix to the shader
 		glUniformMatrix4fv(mvIndex, 1, GL_TRUE, mv);
@@ -206,6 +204,12 @@ namespace gl
 		// Draw the cube.
 		// Argument refers to length of side of cube.
 		// Cube is centered around current origin.
-		BasicGraphics::DrawSolidCube(1.0f);
+		BasicGraphics::DrawSolidCube(0.2f);
+	}
+
+	void GLUtils::Update()
+	{
+		cubeY += 0.1;
+		if (cubeY > 10) cubeY = 0;
 	}
 };

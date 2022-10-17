@@ -4,7 +4,8 @@
 
 #pragma once
 
-
+#define	IDT_TIMER_0	WM_USER + 200
+#define	IDT_TIMER_1	IDT_TIMER_0 + 1
 
 
 class CMFCOpenGLSampleView : public CView
@@ -42,6 +43,8 @@ protected:
 	// You will add the following stuff!!!
 	virtual HGLRC GetOldStyleRenderingContext(CDC* pDC);
 	virtual BOOL SetupPixelFormat(CDC* pDC);
+	UINT StartTimer(UINT timerDuration);
+	BOOL StopTimer(UINT timerVal);
 
 private:
 	//OpenGL Setup
@@ -49,6 +52,7 @@ private:
 	//Rendering Context and Device Context Pointers
 	HGLRC	m_hRC;
 	CDC* m_pDC;
+	UINT m_timer;
 
 	//Error Handling
 	void SetError(int e);
@@ -69,6 +73,9 @@ public:
 	afx_msg void OnSize(UINT nType, int cx, int cy);
 
 
+//	afx_msg void OnTimer(UINT_PTR nIDEvent);
+//	afx_msg void OnPaint();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 };
 
 #ifndef _DEBUG  // debug version in MFC_OpenGL_SampleView.cpp

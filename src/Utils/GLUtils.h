@@ -18,6 +18,8 @@ namespace gl
 		// Scene Related Functions and Variables
 		////////
 
+		static GLfloat cubeY;
+
 		//Model Control Variables
 		static GLfloat rotY;    //rotate model around y axis
 		static GLfloat rotX;    //rotate model around x axis
@@ -35,7 +37,6 @@ namespace gl
 		static void PreRenderScene(void);
 		static void RenderStockScene(void);
 		static void RenderScene(void);
-		//void drawSolidSphere(GLfloat radius, GLint slices, GLint stacks);
-		//void drawSolidCube(GLfloat size);
+		static void Update();
 	};
 }

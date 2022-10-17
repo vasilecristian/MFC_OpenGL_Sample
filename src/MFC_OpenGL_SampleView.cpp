@@ -36,6 +36,7 @@ BEGIN_MESSAGE_MAP(CMFCOpenGLSampleView, CView)
 	ON_WM_CREATE()
 	ON_WM_DESTROY()
 	ON_WM_SIZE()
+	ON_WM_TIMER()
 END_MESSAGE_MAP()
 
 
@@ -54,7 +55,7 @@ const char* const CMFCOpenGLSampleView::_ErrorStrings[] = {
 // CMFCOpenGLSampleView construction/destruction
 
 CMFCOpenGLSampleView::CMFCOpenGLSampleView() noexcept
-	: m_hRC(0), m_pDC(0), m_ErrorString(_ErrorStrings[0])
+	: m_hRC(0), m_pDC(0), m_timer(0), m_ErrorString(_ErrorStrings[0])
 {
 	// TODO: add construction code here
 
@@ -74,6 +75,7 @@ BOOL CMFCOpenGLSampleView::PreCreateWindow(CREATESTRUCT& cs)
 	// include CS_PARENTDC for the class style.
 	cs.style |= WS_CLIPSIBLINGS | WS_CLIPCHILDREN;
 
+
 	return CView::PreCreateWindow(cs);
 }
 
@@ -87,6 +89,7 @@ void CMFCOpenGLSampleView::OnDraw(CDC* /*pDC*/)
 		return;
 
 
+	gl::GLUtils::Update();
 	// Find the OpenGL drawing function provided in the Lab 1 notes and call it here
 	gl::GLUtils::Draw();
 	
@@ -187,6 +190,7 @@ int CMFCOpenGLSampleView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	// Find the initialize OpenGL function provided in the Lab 1 notes and call it here
 	gl::GLUtils::InitializeOpenGL();
 
+	m_timer = StartTimer(20);  // a 200 mSec timer
 
 	return 0;
 }
@@ -195,6 +199,8 @@ int CMFCOpenGLSampleView::OnCreate(LPCREATESTRUCT lpCreateStruct)
 void CMFCOpenGLSampleView::OnDestroy()
 {
 	CView::OnDestroy();
+
+	StopTimer(IDT_TIMER_0);
 
 	// TODO: Add your message handler code here
 	if (FALSE == ::wglDeleteContext(m_hRC))
@@ -404,3 +410,41 @@ BOOL CMFCOpenGLSampleView::SetupPixelFormat(CDC* pDC)
 
 	return TRUE;
 }
+
+void CMFCOpenGLSampleView::OnTimer(UINT_PTR nIDEvent)
+{
+	// TODO: Add your message handler code here and/or call default
+
+	this->Invalidate();
+
+	CView::OnTimer(nIDEvent);
+}
+
+UINT CMFCOpenGLSampleView::StartTimer(UINT timerDuration)
+{
+	UINT    TimerVal;
+	TimerVal = SetTimer(IDT_TIMER_0, timerDuration, NULL);
+
+	if (TimerVal == 0)
+	{
+		AfxMessageBox(_T("Unable to obtain timer IDT_TIMER_0"));
+	}
+	return TimerVal;
+}// end StartTimer
+
+BOOL CMFCOpenGLSampleView::StopTimer(UINT timerVal)
+{
+	//
+	//    Stop the timer
+	//
+
+	if (!KillTimer(timerVal))
+	{
+		return FALSE;
+	}
+	//
+	//    Place clean-up code following this point.
+	//
+	return TRUE;
+} // end StopTimer
+
